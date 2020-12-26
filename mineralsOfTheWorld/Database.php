@@ -74,4 +74,32 @@ class Database {
 
     return $result;
   }
+
+  public function insertComment($props) {
+    $props = (object) $props;
+    $query = "INSERT INTO comment (username, content, mineral_id) VALUES ('$props->username', '$props->content', '$props->mineral_id')";
+    $result = mysqli_query($this->getConnection(), $query) or die(mysqli_error($this->getConnection()));
+
+    if ($result) {
+      return true;
+    }
+
+    return false;
+  }
+
+  public function getAllComments() {
+    $query = "SELECT c.*, m.title FROM comment c JOIN mineral m ON m.id = c.mineral_id";
+    $result = mysqli_query($this->getConnection(), $query);
+    $comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $comments;
+  }
+
+  public function getAllCommentsForMineral($id) {
+    $query = "SELECT * FROM comment WHERE mineral_id = $id";
+    $result = mysqli_query($this->getConnection(), $query);
+    $comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $comments;
+  }
 }

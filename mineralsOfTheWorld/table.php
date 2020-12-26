@@ -2,6 +2,7 @@
 
 require_once 'Database.php';
 $minerals = Database::getInstance()->getAllMinerals();
+$comments = Database::getInstance()->getAllComments();
 
 if (isset($_POST['delete'])) {
   $id = $_POST['mineral_id'];
@@ -65,12 +66,17 @@ if (isset($_POST['delete'])) {
     <tr>
       <th>User</th>
       <th>Comment</th>
+      <th>Mineral</th>
     </tr>
+    <?php foreach ($comments as $comment) : ?>
+      <tr>
+        <td><?php echo $comment['username']; ?></td>
+        <td><?php echo $comment['content']; ?></td>
+        <td><?php echo $comment['title']; ?></td>
+      </tr>
+    <?php endforeach; ?>
     <tr>
-      <td>Zdravko</td>
-      <td>Sve je super!</td>
-    </tr>
-    <tr>
+      <td></td>
       <td></td>
       <td></td>
     </tr>
