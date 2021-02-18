@@ -13,6 +13,7 @@ $minerals = Database::getInstance()->getAllMinerals();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minerals Of The World</title>
   <link rel="stylesheet" href="style.css">
+  <script defear src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -49,11 +50,14 @@ $minerals = Database::getInstance()->getAllMinerals();
 
     <h2 id="c">Products:</h2> <br><br><br>
 
+    Sort by: <span class="nameSort">Name</span> | <span class="priceSort">Price</span> <br>
+    Search: <input type="text" class="searchInput"> <br> <br>
+
     <div class="allProducts">
 
       <?php foreach ($minerals as $mineral) : ?>
         <div class="product">
-          <a href="post.php?id=<?php echo $mineral['id']; ?>"><img src="<?php echo $mineral['img']; ?>" alt="Baryte"></a>
+          <a href="post.php?id=<?php echo $mineral['id']; ?>"><img class="mineral-image" src="<?php echo $mineral['img']; ?>" alt="Baryte"></a>
           <p>username: <?php echo $mineral['username']; ?></p><br>
           <p>mineral: <?php echo $mineral['title']; ?></p><br>
           <p>locality: <?php echo $mineral['locality']; ?></p><br>

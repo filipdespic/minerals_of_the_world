@@ -52,6 +52,22 @@ class Database {
     return $minerals;
   }
 
+  public function getAllMineralsSorted($sortType) {
+    $query = "SELECT * FROM mineral ORDER BY $sortType";
+    $result = mysqli_query($this->getConnection(), $query);
+    $minerals = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $minerals;
+  }
+
+  public function searchMinerals($searchText) {
+    $query = "SELECT * FROM mineral WHERE title LIKE '%$searchText%'";
+    $result = mysqli_query($this->getConnection(), $query);
+    $minerals = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $minerals;
+  }
+
   public function getMineral($id) {
     $query = "SELECT * FROM mineral WHERE id = $id";
     $result = mysqli_query($this->getConnection(), $query);

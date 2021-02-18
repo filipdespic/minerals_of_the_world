@@ -1,125 +1,137 @@
-.header{
-    width:100%;
+.header {
+  width: 100%;
 }
 
-#mineral{
-    width:100%;
+#mineral {
+  width: 100%;
 }
 
-#title{
-    text-align: center;
+#title {
+  text-align: center;
 }
 
-#title h1{
-    font-size: 45px;
+#title h1 {
+  font-size: 45px;
 }
 
-#title h3{
-    color: rgb(121, 9, 155);
+#title h3 {
+  color: rgb(121, 9, 155);
 }
 
-#crystal1{
-    padding-top: 120px;
-    display:flex;
-    float: left;
+#crystal1 {
+  padding-top: 120px;
+  display: flex;
+  float: left;
 }
 
-
-#crystal2{
-    display: flex;
-    float: right;
-    
+#crystal2 {
+  display: flex;
+  float: right;
 }
 
-p{
-    padding: 10px 100px 10px 100px;
+p {
+  padding: 10px 100px 10px 100px;
 }
 
-#smallCrystalDiv{
-   display: flex;
-   justify-content: center;
+#smallCrystalDiv {
+  display: flex;
+  justify-content: center;
 }
 
-#footer{
-    text-align: center;
+#footer {
+  text-align: center;
 }
 
-
-
-body{
-    background-color: rgb(255, 255, 255);
+body {
+  background-color: rgb(255, 255, 255);
 }
 
-
-#smallCrystal{
-    width: 20px;
-    padding: 5px;
+#smallCrystal {
+  width: 20px;
+  padding: 5px;
 }
 
-.breakDiv{
-    height: 150px;
-    
+.breakDiv {
+  height: 150px;
 }
 
-.mineralForm{
-    margin-bottom: 100px;
-    text-align: center;
+.mineralForm {
+  margin-bottom: 100px;
+  text-align: center;
 }
 
-.product img{
-    height: 150px;
-}
-.product p{
-    margin: 0;
-    padding: 0;
-}
-.product{
-    text-align: center;
-    flex-basis: 25%
-}
-.allProducts{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-#motw{
-    height: 100px;
-    margin-top: 20px;
+.product img {
+  height: 150px;
 }
 
-#pr{
-    font-size: 30px;
-    color: black;
-    margin-left:42%;
-    background-color: rgb(175, 171, 171);
-    text-decoration: none;
-    border-style: double;
-}
-#spirifer{
-    font-size: 30px;
-    color: black;
-    margin-left:41.3%;
-    background-color: rgb(175, 171, 171);
-    text-decoration: none;
-    border-style: double;
+.product p {
+  margin: 0;
+  padding: 0;
 }
 
-#cv, #admin{
-    font-size: 30px;
-    color: black;
-    margin-left:44.1%;
-    background-color: rgb(175, 171, 171);
-    text-decoration: none;
-    border-style: double;
+.product {
+  text-align: center;
+  flex-basis: 25%
 }
 
-#t,#c{
-    text-align: center;
+.allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+#motw {
+  height: 100px;
+  margin-top: 20px;
+}
+
+#pr {
+  font-size: 30px;
+  color: black;
+  margin-left: 42%;
+  background-color: rgb(175, 171, 171);
+  text-decoration: none;
+  border-style: double;
+}
+
+#spirifer {
+  font-size: 30px;
+  color: black;
+  margin-left: 41.3%;
+  background-color: rgb(175, 171, 171);
+  text-decoration: none;
+  border-style: double;
+}
+
+#cv, #admin {
+  font-size: 30px;
+  color: black;
+  margin-left: 44.1%;
+  background-color: rgb(175, 171, 171);
+  text-decoration: none;
+  border-style: double;
+}
+
+#t, #c {
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
-    .product{
-        text-align: center;
-        flex-basis: 50%
-    }
+  .product {
+    text-align: center;
+    flex-basis: 50%
   }
+}
+
+.nameSort:hover, .priceSort:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mineral-image {
+  transition: transform .3s ease;
+}
+
+.mineral-image:hover {
+  transform: scale(1.1);
+}
